@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-import { Analytics } from "@vercel/analytics/next"
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +15,12 @@ import { Analytics } from "@vercel/analytics/next"
     <script>
         window.process = { env: { NODE_ENV: 'production' } };
     </script>
+
+    <!-- Vercel Web Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
